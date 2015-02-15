@@ -17,6 +17,7 @@ function initializePage() {
 		var projectID = $(this).closest('.project').attr('id');
 		// get rid of 'project' from the front of the id 'project3'
 		var idNumber = projectID.substr('project'.length);
+		console.log(idNumber);
 
 		// this is the URL we'll call
 		var url_call = '/project/'+idNumber;
@@ -64,8 +65,8 @@ function initializePage() {
 		var date = $('#new-project-form #date').val();
 		var summary = $('#new-project-form #summary').val();
 		var json = {
-			'project_title': title,
-			'image_url': image_url,
+			'title': title,
+			'image': image_url,
 			'date':  date,
 			'summary': summary
 		};
